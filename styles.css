@@ -41,23 +41,32 @@ h3 {
     flex-direction: column;
   }
 
+  p{
+    color: white;
+    text-decoration: none;
+    margin: 10px auto;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: rgba(27, 27, 27, 0.244);
+    padding: 5px;
+  }
+
   img {
     width: 100%;
     border: 4px double white;
     padding: 2px;
-  }
-
-  p{
-    color: white;
-    text-decoration: none;
-    margin: 20px auto;
-    font-size: larger;
+    margin: 30px auto;
+    border-radius: 5px;
   }
   
   a{
     color: white;
     margin: auto;
     text-decoration: none;
+    border: 2px solid #31c5ff;
+    border-radius: 5px;
+    background-color: rgba(27, 27, 27, 0.476);
+    padding: 10px;
     font-size: large;
   }
 }
