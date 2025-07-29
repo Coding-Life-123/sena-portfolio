@@ -70,3 +70,27 @@ h3 {
     font-size: large;
   }
 }
+
+
+@media (max-width: 1400px){
+  .projects{
+    grid-template-columns: 1fr;
+    
+    div img{
+      width: 900px;
+    }
+  }
+
+}
+
+@media (max-width: 1000px){
+  .projects div img{
+    width: 80%;
+  }
+}
+
+@media (max-width:400px){
+  .projects div img{
+    width: 250px;
+  }
+}
