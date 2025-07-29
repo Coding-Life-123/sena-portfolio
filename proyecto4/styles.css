@@ -1,0 +1,343 @@
+*{
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main-div{
+    width: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 60px;
+    background-color: rgb(40, 43, 59);
+    color: #fff;
+    place-items: center;
+    z-index: 99;
+}
+
+.header .name{
+    display: flex;
+    font-size: 20px;
+    margin-left: 8vw;
+}
+
+.header .name b{
+    display: block;
+    margin-right: 5px;
+}
+
+.header .menu .hidden-checkbox{
+    display: none;
+}
+
+.header .menu .menu-icon .bi-list{
+    display: none;
+}
+
+.header .menu .navbar{
+    margin-right: 8vw;
+}
+
+.header .menu .navbar a{
+    margin: 0px 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+}
+
+.quien-soy{
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+}
+
+.quien-soy .quien-soy-container-1{
+    display: flex;
+    width: 70vw;
+    margin: 0 auto;
+    justify-content: space-between;
+    place-items: center;
+}
+
+.quien-soy .quien-soy-container-1 img{
+    width: 500px;
+}
+
+.quien-soy .quien-soy-container-1 .quien-soy-text-container{
+    width: 30vw;
+}
+
+.quien-soy .quien-soy-container-1 .quien-soy-text-container h1{
+    font-size: 60px;
+    color: orangered;
+}
+
+.quien-soy .quien-soy-container-1 .quien-soy-text-container p{
+    color: rgba(0, 0, 0, 0.8);
+    margin: 15px 0;
+}
+
+.quien-soy .quien-soy-container-1 .quien-soy-text-container button{
+    font-size: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: orangered;
+    cursor: pointer;
+}
+
+.quien-soy .quien-soy-container-1 .quien-soy-text-container button:hover{
+    background-color: rgb(154, 41, 0);
+}
+
+.quien-soy .quien-soy-container-1 .quien-soy-text-container button a{
+    color: white;
+    text-decoration: none;
+}
+
+.quien-soy .quien-soy-container-2{
+    background-color: orangered;
+    color: white;
+    display: flex;
+    place-items: center;
+}
+
+.quien-soy .quien-soy-container-2 span{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.quien-soy .quien-soy-container-2 span img{
+    margin: 10px auto;
+    width: 350px;
+    border-radius: 50%;
+}
+
+.quien-soy .quien-soy-container-2 span .long-text{
+    font-size: 35px;
+    width: 80vw;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.quien-soy .quien-soy-container-2 span .name{
+    font-size: 25px;
+    transform: skew(-10deg);
+    margin: 10px auto;
+}
+
+.mis-proyectos{
+    display: flex;
+    flex-direction: column;
+}
+
+.mis-proyectos h1{
+    margin: 30px auto;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.mis-proyectos .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 70vw;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.mis-proyectos .grid div{
+    width: 100%;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.mis-proyectos .grid div img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.mis-proyectos .grid div h2{
+    font-weight: 100;
+    margin: 20px auto;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.mis-proyectos .grid div p{
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.mis-proyectos .grid div button{
+    padding: 6% 10%;
+    margin: 20px auto;
+    background-color: orangered;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.mis-proyectos .grid div button:hover{
+    background-color: rgb(154, 41, 0);
+    cursor: pointer;
+}
+
+.mis-proyectos .grid div button a{
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+footer{
+    height: 60px;
+    background-color: rgb(40, 43, 59);
+    display: flex;
+    justify-content: end;
+    place-items: center;
+}
+
+footer p{
+    color: #fff;
+    font-size: 18px;
+    margin-right: 10vw;
+}
+
+@media (max-width:1250px){
+    .mis-proyectos .grid{
+        grid-template-columns: 1fr;
+    }
+
+    .mis-proyectos .grid div button{
+        padding: 20px 40px
+    }
+}
+
+@media (max-width:1000px){
+    .quien-soy .quien-soy-container-1{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quien-soy .quien-soy-container-1 .quien-soy-text-container{
+        width: 60vw;
+    }
+
+}
+
+@media (max-width:700px){
+    .quien-soy .quien-soy-container-1 img{
+        width: 300px;
+    }
+
+    .quien-soy .quien-soy-container-1 .quien-soy-text-container{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .quien-soy .quien-soy-container-1 .quien-soy-text-container button{
+        margin: 0px auto;
+    }
+
+    .quien-soy .quien-soy-container-2 span img{
+        width: 250px;
+    }
+
+    .mis-proyectos .grid div button{
+        padding: 16px 20px;
+    }
+}
+
+@media (max-width:500px){
+    .header .menu .menu-icon .bi-list{
+        display:block;
+        margin-right: 30px;
+        width: 25px;
+        height: 25px;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        transform: rotate(0deg) scale(1);
+        opacity: 1;
+    }
+
+    .header .menu .navbar{
+        position: absolute;
+        width: 120px;
+        height: fit-content;
+        right: -30px;
+        display: flex;
+        flex-direction: column;
+        top: 60px;
+        z-index: 99;
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        pointer-events: none;
+        background-color: rgb(40, 43, 59);
+        padding: 4px;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    .header .menu .hidden-checkbox:checked ~ .navbar{
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .header .menu .hidden-checkbox:checked + .menu-icon .bi-list{
+        transition: transform 0.3s ease;
+        transform: rotate(-90deg) scale(1.1);
+        opacity: 0.8;
+    }
+
+    .header .menu .navbar a{
+        margin: 2px;
+        padding: 8px;
+        background-color: rgb(255, 106, 52);
+        border-radius: 5px;
+        font-size: 17px;
+    }
+
+    .header .menu .navbar a:hover{
+        background-color: rgb(126, 42, 11);
+    }
+
+    .mis-proyectos h1{
+        font-size: 50px;
+    }
+
+    footer{
+        height: 80px;
+        padding: 20px;
+    }
+
+    footer p{
+        margin-right: 0px;
+        margin-left: 20px;
+    }
+}
+
+
+@media (max-width: 400px){
+    .quien-soy .quien-soy-container-1 img{
+        width: 250px;
+    }
+
+    .quien-soy .quien-soy-container-1 .quien-soy-text-container{
+        width: 250px;
+    }
+
+    .mis-proyectos h1{
+        font-size: 35px;
+    }
+}
