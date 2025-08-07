@@ -1,28 +1,25 @@
 let operador = '';
 
-function asignar(OP){
-    operador = OP;
-}
-
 function desarrollar(){
     let num1 = parseFloat(document.getElementById('num1').value);
     let num2 = parseFloat(document.getElementById('num2').value);
     let htmlResultado = document.getElementById('resultado');
+    operador = document.querySelector('input[name="operador"]:checked').value;
+    console.log(operador);
     let resultado;
-    console.log(num1, num2, operador);
 
     switch(operador){
         case 'suma':
             resultado = num1 + num2;
-            htmlResultado.textContent = resultado
+            htmlResultado.textContent = `resultado: ${resultado}`;
             break;
         case 'resta':
             resultado = num1 - num2;
-            htmlResultado.textContent = resultado
+            htmlResultado.textContent = `resultado: ${resultado}`;
             break;
         case 'multiplicar':
             resultado = num1 * num2;
-            htmlResultado.textContent = resultado
+            htmlResultado.textContent = `resultado: ${resultado}`;
             break;
         case 'dividir':
             if(num1 == 0 || num2 == 0){
@@ -30,7 +27,7 @@ function desarrollar(){
                 htmlResultado.textContent = 'Error, no se permite dividir por 0';
             }else{
                 resultado = num1 / num2;
-                htmlResultado.textContent = resultado
+                htmlResultado.textContent = `resultado: ${resultado}`;
             }
             break;
     }

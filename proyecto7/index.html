@@ -8,15 +8,17 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <input type="number" id="num1" class="num1">
-    <input type="number" id="num2" class="num2">
-    <button onclick="desarrollar()" class="resolver">Desarrollar operación</button>
-    <div class="opciones">
-        <button id="sumar" onclick="asignar('suma')">Sumar</button>
-        <button id="restar" onclick="asignar('resta')">Restar</button>
-        <button id="multiplicar" onclick="asignar('multiplicar')">Multiplicar</button>
-        <button id="dividir" onclick="asignar('dividir')">Dividir</button>
-    </div>
-    <h2 id="resultado"></h2>
+    <main>
+        <input type="number" id="num1" class="num1">
+        <input type="number" id="num2" class="num2">
+        <button onclick="desarrollar()" class="resolver">Desarrollar operación</button>
+        <fieldset class="opciones">
+            <label><input type="radio" name="operador" id="sumar" value="suma">Sumar</label>
+            <label><input type="radio" name="operador" id="restar" value="resta">Restar</label>
+            <label><input type="radio" name="operador" id="multiplicar" value="multiplicar">Multiplicar</label>
+            <label><input type="radio" name="operador" id="dividir" value="dividir">Dividir</label>
+        </fieldset>
+        <h2 id="resultado"></h2>
+    </main>
 </body>
 </html>

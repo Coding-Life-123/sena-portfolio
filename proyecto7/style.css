@@ -3,3 +3,59 @@
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+body{
+    color: white;
+    background-color: rgb(133, 133, 133);
+}
+
+main{
+    margin: 200px auto;
+    background-color: rgb(43, 170, 255);
+    padding: 50px;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    input{
+        margin: 10px auto;
+        padding: 10px;
+        background-color: rgba(83, 83, 83, 0.267);
+        border-radius: 10px;
+        color: white;
+        border: 2px solid aqua;
+    }
+    button{
+        padding: 10px;
+        margin: 10px auto;
+        border: none;
+        border-radius: 10px;
+        background-color: rgba(0, 255, 255, 0.589);
+        color: white;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    fieldset{
+        margin: 10px auto;
+        border: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        
+        label{
+            background-color: rgba(0, 255, 255, 0.473);
+            padding: 10px 5px;
+            border-radius: 10px;
+
+            input{
+                margin: 0px 2px;
+            }
+        }
+    }
+    h2{
+        margin: 10px auto;
+    }
+}
+
