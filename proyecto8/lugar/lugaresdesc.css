@@ -1,0 +1,107 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('../mapamundi.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.navbar {
+    display: flex;
+    color: white;
+    padding: 20px 0px;
+    width: 100%;
+    margin: auto;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    h1 {
+        margin: auto;
+    }
+}
+
+.back-button{
+    margin: 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    position: fixed;
+
+    .bi-caret-left{
+        padding: 10px;
+        height: 20px;
+        width: 20px;
+        margin: 0px;
+
+    }
+}
+
+.center-element {
+    border-radius: 20px;
+    margin: 40px auto 50px auto;
+    width: 80%;
+    box-shadow: inset 0 0 15px 5px currentColor;
+
+    .main-element{
+        display: flex;
+        flex-direction: column;
+        padding: 60px 0px;
+        margin: auto;
+        width: 60%;
+        color: white;  
+        
+        h1{
+            margin: 30px auto;
+        }
+
+        .image {
+            width: 100%;
+            margin: 0px auto 30px auto;
+            border-radius: 10px;
+            border: 2px solid white;
+            box-shadow: 0 0 20px 5px white;
+        }
+
+        hr{
+            margin: 40px 0px;
+        }
+
+        .group-container{
+            display: flex;
+            flex-direction: column;
+            margin: 0px;
+            
+            p{
+                margin: 0px;
+            }
+        }
+    
+        .location{
+            display: flex;
+        }
+    }
+
+    .main-element:first-of-type div{
+        margin-top: 40px;
+    }
+}
+
+@media(max-width:450px){
+    h1{
+        font-size: 20px;
+    }
+    h2{
+        font-size: 18px;
+    }
+    .main-element{
+        width: 90%;
+    }
+}

@@ -1,0 +1,129 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url('./mapamundi.png');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.navbar{
+    display: flex;
+    color: white;
+    padding: 20px 0px;
+    width: 100%;
+    margin: auto;
+    background: rgba(26, 26, 46, 0.6);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    h1{
+        margin: auto;
+    }
+}
+
+.main{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 90%;
+    margin: 40px auto 0px auto;
+    transition: 500ms;
+
+    .lugar-container{
+        margin: 10px 20px;
+        padding: 20px;
+        transition: 400ms;
+        display: flex;
+        opacity: 1.0;
+        border-radius: 20px;
+        
+        .logo{
+            width: 160px;
+            height: 140px;
+            margin-right: 20px;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .contenido{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+            position: relative;
+
+            .textos{
+                display: flex;
+                flex-direction: column;        
+
+                h2{
+                    margin: 5px 0px;
+                }
+
+                .ubicacion{
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin: 0px;
+                    padding: 0px;
+                }
+
+                p{
+                    margin: 10px 0px;
+                    padding: 0px 0px 30px 0px;
+                }
+            }
+
+            button{
+                border: none;
+                width: 120px;
+                height: fit-content;
+                padding: 8px 10px;
+                border-radius: 14px;
+                background-color: rgba(255, 255, 255, 0.864);
+                margin-left: auto;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+.lugar-container:hover{
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+@media (max-width:1600px) {
+    .main{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:1000px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:500px){
+    .navbar h1{
+        font-size: 24px;
+    }
+
+    .lugar-container{
+        flex-direction: column;
+        padding: 0px;
+
+        .logo{
+            margin: 0px auto 20px auto !important;
+        }
+    }
+}
