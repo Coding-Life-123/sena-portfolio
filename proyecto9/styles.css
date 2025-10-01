@@ -1,0 +1,509 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: rgb(85, 85, 85);
+    height: 96vh;
+}
+
+
+
+.main {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    margin-top: 2cqw;
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    .navbarContainer{
+        width: fit-content;
+        margin: auto;
+        height: fit-content;
+        position: fixed;
+        right: 80px;        
+        z-index: 10;
+
+        .menu-button{
+            width: fit-content;
+            height: fit-content;
+            padding: 0;
+            border: none;
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            background-color: #1d3557;
+            color: white;
+
+            svg{
+                transition: transform 0.6s ease;
+                margin: auto;
+            }
+            svg.active{
+                transform: rotate(-90deg);
+            }
+
+            p{
+                margin: auto;
+                margin-left: 5px;
+                font-size: 15px;
+            }
+        }      
+
+        .menu-button:hover{
+            background-color: #16324f;
+        }
+
+        .navbar{
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            transition: opacity 0.3s ease;
+            z-index: 10;
+            padding: 6px;
+            border-radius: 10px;
+            background-color: #2c3e50;
+
+            button{
+                border: none;
+                color: whitesmoke;
+                padding: 8px;
+                border-radius: 10px;
+                font-weight: 600;
+                background-color: #FF6B35;
+                margin: 5px 4px;
+            }
+            button:hover{
+                background-color: #FF854D;
+            }
+        }
+        .open{
+            display: flex;
+            
+        }        
+    }
+
+    @media(max-width: 900px){
+        .navbarContainer{
+            right: 40px;
+        }
+    }
+    @media(max-width: 750px){
+        .navbarContainer{
+            right: 20px;
+        }
+    }
+    
+    @media(max-width: 680px){
+        .admin-mesas, .admin-reservas{
+            margin-top: 70px;
+
+            h1{
+                padding-bottom: 20px;
+            }
+        }
+    }
+    
+    .admin-mesas, .admin-reservas{
+        width: 100%;
+        height: 100%;
+        display: none;
+        flex-direction: column;
+
+        h1 {
+            margin: 0px auto;
+            margin-bottom: 1rem;
+        }
+
+        .addMesa, .addReserva{
+            width: fit-content;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        .addMesa:hover, .addReserva:hover{
+            background-color: #218838;
+        }
+        
+        h1{
+            margin: 0px auto;
+        }
+        
+        .tables{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            bottom: 0;
+            border: 1px solid #ccc;
+            margin: 10px 0px;
+            overflow: hidden;
+
+            .disponible{
+                background-color: #28a745;
+            }
+
+            .disponible:hover{
+                background-color: #218838;
+            }
+
+            .ocupada{
+                background-color: #17a2b8;
+            }
+
+            .ocupada:hover{
+                background-color: #138496;
+            }
+
+            .deshabilitada{
+                background-color: #343a40;
+                color: rgba(255, 255, 255, 0.8);
+            }
+
+            .deshabilitada:hover{
+                background-color: #23272b;
+            }
+
+            .table {
+                margin: 5px;
+                display: flex;
+                flex-direction: column;
+                border-radius: 20px;
+                border: 2px solid #4ca1af;
+                padding: 10px 20px;
+                position: absolute;
+                cursor: grab;
+                transition: transform 0.1s ease;
+
+                .top-menu-mesa{
+                    display: flex;
+                }
+
+                .opciones-mesa{
+                    justify-content: space-between;
+                    width: fit-content;
+                    margin: 10px auto 0px auto;
+                    display: flex;
+                    button{
+                        border: none;
+                        background-color: transparent;
+                        color: white;
+                        height: 20px;
+                        width: 20px;
+                        margin: 0px 5px;
+                        cursor: pointer;
+                        svg{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+
+                h2 {
+                    margin: 0px auto;
+                }
+
+                img {
+                    height: 80px;
+                    margin: 10px auto;
+                }
+
+                p{
+                    height: fit-content;
+                    width: 140px;
+                }
+            }
+
+            .table:active {
+                cursor: grabbing;
+                transform: scale(1.03);
+            }
+        }
+
+    }
+
+
+    .admin-reservas{
+
+        .reservas{
+            width: 100%;
+            height: 100vh;
+            margin: 10px 0px;
+            border: 1px solid white;
+            overflow: scroll;
+            padding: 10px;
+            display: block;
+
+            .reserva{
+                height: fit-content;
+                width: 90%;
+                margin: auto;
+                margin-top: 20px;
+                border-radius: 10px;
+                padding: 20px;
+                
+                .reserva-head{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    h2{
+                        font-size: 22px;
+                    }
+                    .reserva-menu{
+                        display: flex;
+
+                        button{
+                            cursor: pointer;
+                            margin: auto;
+                            height: 16px;
+                            position: relative;
+                            width: 16px;
+                            background-color: transparent;
+                            border: none;
+                            color: white;
+
+                            svg{
+                                margin: auto;
+                            }
+                        }
+                        .opciones-reserva{
+                            position: fixed;
+                            top: 0;
+                            left: 0;
+                            height: fit-content;                         
+                            width: fit-content;
+                            background-color: #2c3e50;
+                            padding: 3px;
+                            border-radius: 10px;
+                            display: none; 
+                            opacity: 0;
+                            transition: opacity 0.3s ease;
+                            flex-direction: column;                            
+                            z-index: 100;
+                            overflow: hidden;
+                            button{
+                                margin-left: 0px;
+                                width: 100%;
+                                height: fit-content;
+                                padding: 5px;
+                                text-align: left;
+                                font-weight: 600;
+                                font-size: 15px;
+                            }
+
+                            button:nth-child(1) { 
+                                background-color: #0e69b9;
+                                border-radius: 8px 8px 0px 0px;
+                            }
+                            button:nth-child(2) {
+                                background-color: #108e16;
+                            }
+                            button:nth-child(3) {
+                                background-color: #ae1515;
+                                border-radius: 0px 0px 8px 8px;
+                            }
+
+                            button:nth-child(1):hover { 
+                                background-color: #1e88e5;
+                            }
+                            button:nth-child(2):hover {
+                                background-color: #34af3a;
+                            }
+                            button:nth-child(3):hover {
+                                background-color: #d13535;
+                            }
+                        }
+                    }
+                }                
+
+                .reserva-info{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    padding: 10px;
+                    height: 60px;
+
+                    div{
+                        margin: 0 5px;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        row-gap: 20px;
+                    }
+                }
+                @media(max-width: 760px) {
+                    .reserva-info{
+                        grid-template-columns: repeat(2, 1fr);
+                        row-gap: 30px;
+                    }
+                }
+                        @media(max-width: 550px) {
+                    .reserva-info{
+                        grid-template-columns: 1fr;
+                        row-gap: 30px;
+                    }
+                }
+            }
+            @media(max-width: 760px){
+                .reserva{
+                    height: 180px;
+                }
+            }
+            @media(max-width: 550px){
+                .reserva{
+                    height: 360px;
+                }
+            }
+            .confirmada{
+                background-color: #218838;
+            }
+
+            .confirmada:hover{
+                background-color: #28a745;
+            }
+
+            .pendiente{
+                background-color: #FF6B35;
+            }
+
+            .pendiente:hover{
+                background-color: #FF854D;
+            }
+
+            .cancelada{
+                background-color: #c82333;
+            }
+
+            .cancelada:hover{
+                background-color: #dc3545;
+            }
+
+            .finalizada{
+                background-color: #0069d9;
+            }
+
+            .finalizada:hover{
+                background-color: #007bff;
+            }
+
+            .no{
+                background-color: #5a6268;
+            }
+
+            .no:hover{
+                background-color: #6c757d;
+            }
+        }
+    }
+
+}
+
+.mesa-container, .reserva-container, .edit-mesa-container, .edit-reserva-container{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.45);
+
+    .mesa-modal, .reserva-modal, .edit-mesa-modal, .edit-reserva-modal{
+        color: white;
+        display: none;
+        background-color: #4ca1af;
+        flex-direction: column;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: auto;
+        vertical-align: middle;
+        z-index: 100;
+        height: fit-content;
+        border-radius: 20px;
+        border: 1px solid black;
+        padding: 40px;
+
+        button{
+            border: none;
+            background: none;
+            margin: 0;
+            padding: 0;
+            margin-left: 100%;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+        }
+
+        h1{
+            margin: 10px 0px;
+            
+        }
+        form{
+            padding: 10px;            
+            width: 500px;
+
+            .form-group{
+                margin: 16px 0px 4px 0px;
+            }
+            select{
+                border: none;
+                background-color: #fffe;
+                padding: 3px 8px;
+                border-radius: 8px;
+            }
+            label{
+                font-weight: 600;
+            }
+            input{
+                border: none;
+                background-color: #fffe;
+                border-radius: 8px;
+                padding: 3px 8px;
+            }
+            input:focus{
+                outline: none;
+            }
+            button{
+                margin: 16px 0px 4px 0px;
+                background-color: #FF4E50;
+                padding: 5px;
+                border-radius: 10px;
+                height: 30px;
+                width: 50px;
+                
+                svg{
+                    width: 20px;
+                    height: 20px;
+                    margin: auto;
+                }
+            }
+            .error{
+                width: 80%;
+                margin-top: 20px;
+                display: none;
+            }
+            .error-parag{
+                color: red;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+
+    
